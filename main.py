@@ -7,10 +7,10 @@ population = pd.read_csv("archive/losses_russia.csv")
 
 # Creating sample dataset
 
-sample = pd.DataFrame({
-    "losses_total": population['losses_total'].head(50),
-})
-sample.to_csv('sample.csv')
+# sample = pd.DataFrame({
+#     "losses_total": population['losses_total'].head(50),
+# })
+# sample.to_csv('sample.csv')
 
 # Z Test calculations
 
@@ -30,8 +30,9 @@ table_z = {
     0.001: 3.291
 }
 
-print(abs(z))
+print("\nz = ", z)
 if abs(z) < table_z[0.05]:
     print("Retain H0,")
 else:
     print("Reject H0")
+print('\n')
